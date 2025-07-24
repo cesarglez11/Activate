@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Advertencia de Virus</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        #mensaje {
+            font-size: 32px;
+            animation: parpadeo 1s infinite;
+        }
+
+        @keyframes parpadeo {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        #cancelar {
+            display: none;
+            margin-top: 40px;
+            padding: 10px 30px;
+            font-size: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #cancelar:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mensaje">⚠ VIRUZ de la máquina está siendo ingresado... por favor espera 3 segundos ⚠</div>
+    <button id="cancelar" onclick="window.location.href='infectado.html'">Cancelar</button>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById("cancelar").style.display = "inline-block";
+        }, 3000); // Mostrar botón después de 3 segundos
+    </script>
+
+</body>
+</html>
